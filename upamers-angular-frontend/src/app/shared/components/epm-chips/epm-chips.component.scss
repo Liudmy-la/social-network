@@ -1,0 +1,64 @@
+.button {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	padding: 8px 12px;
+	border: 1px solid var(--outline-stroke-default, #A5A8BA);
+	border-radius: 4px;
+	cursor: pointer;
+	outline: none;
+	transition: background-color 0.3s;
+  
+	&:hover {
+	  background-color: #f0f0f0;
+	}
+  
+	&.active {
+	  background-color: var(--surface-lighter, #EBEEFF);
+	  border-color: var(--elements-buttons-rested, #6168E4);
+	}
+  
+	.interest-icon {
+	  margin-right: 8px;
+	  img {
+		max-width: 100%;
+		height: auto;
+	  }
+	}
+  
+	.description {
+	  flex-grow: 1;
+	  margin: 0;
+	  overflow: hidden;
+	  text-overflow: ellipsis;
+	  white-space: nowrap;
+  
+	  &.left {
+		text-align: left;
+	  }
+  
+	  &.right {
+		text-align: right;
+	  }
+	}
+  
+	.action-icon {
+	  margin-left: 8px;
+	  img {
+		max-width: 100%;
+		height: auto;
+	  }
+	}
+  
+	&.editable {
+	  &:hover {
+		.action-icon {
+		  display: inline;
+		}
+	  }
+  
+	  .action-icon {
+		display: none;
+	  }
+	}
+  }
